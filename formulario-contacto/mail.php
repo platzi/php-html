@@ -9,11 +9,12 @@ function sendMail($subject, $body, $email, $name, $html = false) {
     // Configuración inicial de nuestro servidor de correos
     $phpmailer = new PHPMailer();
     $phpmailer->isSMTP();
-    $phpmailer->Host = 'smtp.mailtrap.io';
+    $phpmailer->Host = 'smtp.gmail.com';
     $phpmailer->SMTPAuth = true;
-    $phpmailer->Port = 2525;
-    $phpmailer->Username = '4ca1ce943d0ba1';
-    $phpmailer->Password = 'dcb5849e9c1c37';
+    $phpmailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $phpmailer->Port = 465;
+    $phpmailer->Username = 'don.michi.michisancio@gmail.com';
+    $phpmailer->Password = 'amffkjcdoxxbcvig';
 
     //  Añadiendo destinatarios
     $phpmailer->setFrom('mark@facebook.com', 'Mark Zuckerberg');
